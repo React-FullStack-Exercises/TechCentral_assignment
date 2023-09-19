@@ -1,0 +1,187 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.heading {
+  width: 100%;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  line-height: 60px;
+  margin-top: 15px;
+}
+.heading span {
+  background: #fff;
+  padding: 0 10px;
+  font-style: italic;
+  font-size: 20px;
+  display: block;
+  width: fit-content;
+  margin-top: -30px;
+  margin-left: 40%;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+  padding: 0px 5px;
+  height: 92vh;
+}
+.container .category {
+  color: rgb(211, 20, 20);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.container .section {
+  overflow: scroll;
+  padding: 0px 15px;
+  padding-bottom: 0px;
+}
+.container .section.left {
+  width: 25%;
+  border-right: 1px rgba(0, 0, 0, 0.2) solid;
+}
+.container .section.left > *:not(:last-child) {
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.container .section.left .card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.container .section.left .card img {
+  object-fit: cover;
+  height: 160px;
+}
+.container .section.left .card .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0px;
+  color: #000;
+  text-transform: capitalize;
+}
+.container .section.left .card .author {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.container .section.main {
+  width: 50%;
+}
+.container .section.main img {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+}
+.container .section.main .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+}
+.container .section.main .content .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 33px;
+  margin: 0px;
+  color: #000;
+  text-align: center;
+}
+.container .section.main .content .body {
+  margin: 0;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+.container .section.main .content .author {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.container .section.right {
+  width: 25%;
+  border-left: 1px rgba(0, 0, 0, 0.2) solid;
+}
+.container .section.right > *:not(:last-child) {
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.container .section.right .card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.container .section.right .card .row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.container .section.right .card .row .title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0px;
+  color: #000;
+  text-transform: capitalize;
+  margin-top: 10px;
+  line-height: 0.9;
+}
+.container .section.right .card .row img {
+  object-fit: cover;
+  height: 90px;
+  width: 100px;
+}
+.container .section.right .card .author {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.container .section.right .signup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 15px;
+}
+.container .section.right .signup h3 {
+  margin: 0px;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+}
+.container .section.right .signup input {
+  height: 38px;
+  padding-left: 13px;
+  width: 220px;
+}
+.container .section.right .signup button {
+  height: 38px;
+  background-color: rgb(211, 20, 20);
+  color: white;
+  outline: none;
+  border: none;
+  width: 80px;
+}
+.container .section.right .signup .disclaimer {
+  font-size: 13px;
+  color: gray;
+}
+.container .section.right .signup .disclaimer strong {
+  font-weight: 700;
+  color: #000;
+}

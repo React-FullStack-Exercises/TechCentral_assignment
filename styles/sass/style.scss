@@ -1,0 +1,195 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: rgba(0, 0, 0, 0.2);
+$red: rgb(211, 20, 20);
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.heading {
+  width: 100%;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  line-height: 60px;
+  margin-top: 15px;
+
+  span {
+    background: #fff;
+    padding: 0 10px;
+    font-style: italic;
+    font-size: 20px;
+    display: block;
+    width: fit-content;
+    margin-top: -30px;
+    margin-left: 40%;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+  padding: 0px 5px;
+  height: 92vh;
+  .category {
+    color: $red;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .section {
+    overflow: scroll;
+    padding: 0px 15px;
+    padding-bottom: 0px;
+    &.left {
+      width: 25%;
+      border-right: 1px $secondary-color solid;
+      
+        > *:not(:last-child) {
+          border-bottom: 1px $secondary-color solid;
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+        }
+        .card {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          img {
+            object-fit: cover;
+            height: 160px;
+          }
+          .title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 22px;
+            margin: 0px;
+            color: #000;
+            text-transform: capitalize;
+          }
+          .author {
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      
+      
+    }
+    &.main {
+      width: 50%;
+      img {
+        object-fit: cover;
+        height: 280px;
+        width: 100%;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 25px;
+
+        .title {
+          font-family: 'Playfair Display', serif;
+          font-weight: 500;
+          font-size: 33px;
+          margin: 0px;
+          color: #000;
+          text-align: center;
+        }
+        .body {
+          margin: 0;
+          text-align: center;
+          font-family: 'Playfair Display', serif;
+          font-size: 20px;
+        }
+        .author {
+          color: rgba(0, 0, 0, 0.6);
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+    &.right {
+      width: 25%;
+      border-left: 1px $secondary-color solid;
+      > *:not(:last-child) {
+        border-bottom: 1px $secondary-color solid;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        .row {
+          display: flex;
+          flex-direction: row;
+          gap: 12px;
+          .title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 20px;
+            margin: 0px;
+            color: #000;
+            text-transform: capitalize;
+            margin-top: 10px;
+            line-height: 0.9;
+          }
+          img {
+            object-fit: cover;
+            height: 90px;
+            width: 100px;
+          }
+        }
+        .author {
+          color: rgba(0, 0, 0, 0.6);
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+      .signup {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 15px;
+        h3 {
+          margin: 0px;
+          font-family: 'Playfair Display', serif;
+          font-weight: 900;
+        }
+        input {
+          height: 38px;
+          padding-left: 13px;
+          width: 220px;
+        }
+        button {
+          height: 38px;
+          background-color: $red;
+          color: white;
+          outline: none;
+          border: none;
+          width: 80px;
+        }
+        .disclaimer {
+          font-size: 13px;
+          color: gray;
+          strong {
+            font-weight: 700;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
